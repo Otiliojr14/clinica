@@ -1,0 +1,32 @@
+:root {
+    /* Color styles */
+    --ink-dark: rgba(32, 47, 47, 1);
+    --ink-middle-dark: rgba(28, 119, 119, 1);
+    --ink-middle: rgba(0, 164, 164, 1);
+    --ink-white: rgba(249, 253, 252, 1);
+    --primary-default: rgba(0, 229, 216, 1);
+    --primary-light: rgba(83, 255, 244, 1);
+    --primary-lighter: rgba(166, 255, 250, 1);
+    --secondary-darker: rgba(98, 39, 4, 1);
+    --secondary-dark: rgba(196, 77, 8, 1);
+    --secondary-default: rgba(245, 98, 12, 1);
+    --secondary-slightlylight: rgba(247, 128, 59, 1);
+    --secondary-light: rgba(249, 160, 108, 1);
+    --secondary-lighter: rgba(251, 192, 157, 1);
+    --tertiary-darker: rgba(59, 5, 97, 1);
+    --tertiary-dark: rgba(117, 10, 194, 1);
+    --tertiary-default: rgba(168, 61, 245, 1);
+    --tertiary-slightlylight: rgba(190, 109, 248, 1);
+    --tertiary-light: rgba(212, 158, 250, 1);
+    --tertiary-lighter: rgba(233, 206, 253, 1);
+
+    /* Text-size styles */
+    /* base size: rem--reference (10px) */
+    --h1: 9rem;
+    --h2: 6.4rem;
+    --h3: 4.5rem;
+    --h4: 3.2rem;
+    --h5: 2.3rem;
+    --body: 1.6rem;
+    --label: 1.1rem;
+}

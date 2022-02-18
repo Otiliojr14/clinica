@@ -1,0 +1,55 @@
+.u-center-text {
+    text-align: center;
+}
+.u-container {
+    max-width: 114rem;
+    margin: 0 auto;
+    width: 95%;
+
+    @include responsive(tab-port) {
+        max-width: 70rem;
+    }
+
+    @include responsive(phone) {
+        max-width: 45rem;
+    }
+}
+.u-margin-bottom {
+    &-small {
+        margin-bottom: 1.5rem;
+    }
+    &-medium {
+        margin-bottom: 4rem;
+    }
+    &-big {
+        margin-bottom: 8rem;
+    }
+}
+
+.u-margin-top {
+    &-small {
+        margin-top: 1.5rem;
+    }
+    &-medium {
+        margin-top: 4rem;
+    }
+    &-big {
+        margin-top: 8rem;
+    }
+    &-huge {
+        margin-top: 10rem;
+    }
+}
+
+.u-flex-center-row {
+    justify-content: center;
+}
+
+.invisible {
+    display: none;
+}
+
+.activeLabel {
+    color: var(--ink-middle);
+    font-weight: 700;
+}

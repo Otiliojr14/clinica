@@ -1,0 +1,16 @@
+.header {
+    background-color: var(--ink-white);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    border-bottom: 1px solid var(--ink-middle-dark);
+
+    &__title {
+        padding: 1.5rem;
+    }
+}
+
+.title-page {
+    text-align: center;
+    margin: 2rem 0;
+}
