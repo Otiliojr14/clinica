@@ -14,17 +14,19 @@
         <h4 class="header__title">Clínica DAMR</h4>
         <section class="option">
             <div class="option__header-box">
-                <h5 class="option__header">Usuario: Nombre Apellido Apellido</h5>
-            </div>            
-            <div class="option__list">
-                <a class="option__item" href="/">Cerrar sesión</a>
-            </div>
+                <h5 class="option__header">Usuario: {{Session::get($session_name)->nombre}} {{Session::get($session_name)->apellido}}</h5>
+            </div>         
+            <a href="/clpersonal/close_section" class="option__list">
+                <div class="option__item">
+                    <p>Cerrar sesión</p>
+                    <img src="{{ asset('assets/img/svg/exit-icon.svg') }}"/>
+                </div>                
+            </a>
         </section>
     </header>
     @yield('content')
 
     <script src="{{ asset('assets/js/sweetalert2.all.min.js')}}"></script>
-    <script src="{{ asset('assets/js/selectors.js')}}"></script>
 
     @yield('footer')
 </body>

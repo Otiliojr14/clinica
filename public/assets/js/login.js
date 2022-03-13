@@ -4,6 +4,7 @@ import {
     matriculaInput,
     passwordInput,
     tipoUsuarioInput,
+    loginButton,
 } from "./selectors.js";
 
 window.onload = () => {
@@ -24,15 +25,17 @@ function userCheck(e) {
             text: "Ingrese todos los datos",
         });
     } else {
+        loginButton.value = "Espere...";
         const xhr = new XMLHttpRequest();
 
         const data = new FormData();
 
+        data.append("type", "login");
         data.append("matricula", matricula);
         data.append("password", password);
         data.append("tipoUsuario", tipoUsuario);
 
-        xhr.open("POST", `/clpersonal/login?_token=${token}`, true);
+        xhr.open("POST", `/clpersonal/ajax?_token=${token.value}`, true);
 
         xhr.onload = function () {
             if (this.status === 200) {
@@ -45,7 +48,7 @@ function userCheck(e) {
                         text: `${response.text}`,
                     }).then((resultado) => {
                         if (resultado.value) {
-                            window.location.href = "/medical_history/create";
+                            window.location.href = "/medical_history";
                         }
                     });
                 } else {
@@ -55,6 +58,14 @@ function userCheck(e) {
                         text: `${response.text}`,
                     });
                 }
+                loginButton.value = "Ingresar";
+            } else {
+                swal({
+                    type: "error",
+                    title: `Error!`,
+                    text: `Hubo un error, intente de nuevo más tarde`,
+                });
+                loginButton.value = "Ingresar";
             }
         };
 

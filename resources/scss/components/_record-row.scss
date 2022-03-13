@@ -1,0 +1,37 @@
+.record-row {
+    background-color: var(--ink-white);
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: auto 13rem;
+    border: 1px solid var(--ink-middle-dark);
+    align-items: center;
+
+    &__title {
+        margin-bottom: 1rem;
+
+        span {
+            font-weight: normal;
+        }
+    }
+
+    &__label {
+        color: var(--secondary-default);
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .form__input-box {
+        margin: 0;
+    }
+    .form__input-button {
+        margin: 0;
+    }
+
+    a {
+        margin: 0;
+        display: grid;
+        place-items: center;
+    }
+}

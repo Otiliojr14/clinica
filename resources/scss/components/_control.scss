@@ -1,0 +1,23 @@
+.control {
+    &__option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        background-color: var(--ink-white);
+        border: 1px solid var(--ink-middle-dark);
+        margin-bottom: 1.5rem;
+
+        &.active {
+            background-color: var(--tertiary-lighter);
+            border: 1px solid var(--tertiary-dark);
+        }
+
+        &:hover {
+            cursor: pointer;
+            border: 1px solid var(--secondary-default);
+            text-decoration: underline;
+            color: var(--secondary-default);
+        }
+    }
+}

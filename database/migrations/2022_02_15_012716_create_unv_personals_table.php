@@ -17,12 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('apellido');
-            $table->string('telefono', 20);
+            $table->string('telefono', 20)->nullable();
             $table->string('matricula', 30);
             $table->tinyInteger('no_beneficiario');
+            $table->string('parentesco');
             $table->char('sexo', 1);
             $table->date('fecha_nacimiento');
-            $table->integer('category_id')->unsigned()->nullable();
             $table->timestamps();
         });
     }

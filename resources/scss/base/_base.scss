@@ -33,6 +33,18 @@ body {
     }
 }
 
+.textMessage {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 // ::selection {
 //     background-color: $color-primary;
 //     color: $color-white;

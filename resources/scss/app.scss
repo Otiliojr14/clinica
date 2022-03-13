@@ -10,8 +10,12 @@
 // Components folder
 @import "components/form";
 @import "components/options";
-// Components folder
+@import "components/control";
+@import "components/record-row";
+@import "components/box-info"; // Components folder
 @import "layout/header";
 @import "layout/create_medical";
 // Pages folder
 @import "pages/login";
+@import "pages/medical_index";
+@import "pages/medical_pacient";

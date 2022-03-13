@@ -13,7 +13,6 @@
         <h5 class="form__title">Clínica</h5>
         <form action="post" class="form__data" id="form__login">
             @csrf
-            <input type="hidden" name="_token" class="form__token" value="{{ csrf_token() }}">
             <div class="form__input-box">
                 <label for="matricula" class="form__label">Matrícula</label>
                 <input type="text" class="form__input" name="matricula" id="matricula">
@@ -28,10 +27,11 @@
                     <option value="">Seleccione el tipo de usuario</option>
                     <option value="1">Médico</option>
                     <option value="2">Enfermero</option>
+                    <option value="3">Administrador</option>
                 </select>
             </div>
             <div class="form__input-box form__input-box--last">
-                <input type="submit" value="Ingresar" class="form__input form__input-button">
+                <input type="submit" value="Ingresar" class="form__input form__input-button form__input-button--login">
             </div>            
         </form>
     </section>

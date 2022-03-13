@@ -1,8 +1,6 @@
 export const formularioLogin = document.querySelector("#form__login"),
-    token = document.querySelector(".form__token").value,
+    token = document.getElementsByName("_token")[0],
     matriculaInput = document.querySelector("#matricula"),
     passwordInput = document.querySelector("#password"),
-    tipoUsuarioInput = document.querySelector("#tipo_usuario"),
-    buttonsFormCreate = document.querySelectorAll(".form__input-button"),
-    articlesFormCreate = document.querySelectorAll(".form__article"),
-    labelsArticleCreate = document.querySelectorAll(".form__title-section");
+    loginButton = document.querySelector(".form__input-button--login"),
+    tipoUsuarioInput = document.querySelector("#tipo_usuario");

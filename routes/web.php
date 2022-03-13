@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\clPersonalController;
 use App\Http\Controllers\MedicalHistoryController;
 use App\Models\ClPersonal;
+use App\Models\Specialty;
 use App\Models\UnvPersonal;
 use Illuminate\Support\Facades\Route;
 
@@ -12,20 +12,27 @@ Route::get('/', [clPersonalController::class, 'login']);
 
 Route::resource('medical_history', MedicalHistoryController::class);
 
-Route::get('/read', function () {
-    // $personal = UnvPersonal::findOrFail(1);
+Route::get('/insert', function () {
+    // $unv_personal = new UnvPersonal();
+    // $unv_personal->nombre = 'Ramón';
+    // $unv_personal->apellido = 'Cuj Escamilla';
+    // $unv_personal->telefono = '9341354212';
+    // $unv_personal->matricula = '932850';
+    // $unv_personal->no_beneficiario = 0;
+    // $unv_personal->parentesco = 'Derecho';
+    // $unv_personal->sexo = 'H';
+    // $unv_personal->fecha_nacimiento = '1976-05-10';
+    // $unv_personal->save();
 
-    // return $personal->category;
+    // $cl_personal = new ClPersonal();
+    // $cl_personal->unv_personal_id = 3;
+    // $cl_personal->categoria = 1;
+    // $cl_personal->save();
 
-    $personal = ClPersonal::findOrFail(1);
-
-    return $personal->unv_personal;
-
-    // echo $user->address->name;
-
-    // $user->address()->delete();
+    $specialty = new Specialty();
+    $specialty->name = 'CARDIOLOGIA';
+    $specialty->save();
 });
 
-// Route::post('/ajax', [clPersonalController::class , 'save']);
-
-Route::post('/clpersonal/login', [clPersonalController::class , 'check_user']);
+Route::post('/clpersonal/ajax', [clPersonalController::class , 'ajax']);
+Route::get('/clpersonal/close_section', [clPersonalController::class , 'close_section']);

@@ -17,6 +17,13 @@
         text-transform: uppercase;
         text-align: center;
         margin-top: 1.5rem;
+        &--paciente {
+            text-transform: uppercase;
+            text-align: center;
+            border-bottom: 1px solid var(--ink-dark);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
     }
 
     &__header {
@@ -46,6 +53,10 @@
         &--last {
             margin-bottom: 0;
         }
+
+        &--optional {
+            display: none;
+        }
     }
 
     &__input-buttons {
@@ -57,7 +68,7 @@
     &__label {
         font-size: var(--body);
         margin: 0.5rem 0;
-        font-weight: 400;
+        font-weight: 700;
     }
 
     &__input,
@@ -101,20 +112,60 @@
             outline: none;
             border: 1px solid var(--secondary-default);
         }
-    }
 
-    &__radio-box {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 1rem 0;
-    }
+        &-button--send {
+            &,
+            &:link,
+            &:visited {
+                background-color: var(--tertiary-default);
+                border: 1px solid var(--tertiary-dark);
+                text-transform: uppercase;
+                font-weight: 700;
+                color: var(--ink-white);
+                margin-top: 1rem;
+            }
 
-    &__radio-input {
-        margin-right: 0.5rem;
+            &:hover {
+                background-color: var(--secondary-default);
+                border: 1px solid var(--secondary-dark);
+                cursor: pointer;
+            }
+
+            &:active {
+                border: 1px solid var(--secondary-dark);
+            }
+        }
+
+        &-button--disabled {
+            &,
+            &:link,
+            &:visited {
+                background-color: var(--primary-lighter);
+                border: 1px solid var(--ink-middle);
+                text-transform: uppercase;
+                font-weight: 700;
+                color: var(--ink-dark);
+                margin-top: 1rem;
+            }
+
+            &:hover {
+                background-color: var(--primary-lighter);
+                border: 1px solid var(--ink-middle);
+                cursor: not-allowed;
+            }
+
+            &:active {
+                border: 1px solid var(--ink-middle);
+            }
+        }
     }
 
     &__textarea {
         resize: none;
         height: 10rem;
+    }
+
+    &__text {
+        margin: 0.5rem 0;
     }
 }
